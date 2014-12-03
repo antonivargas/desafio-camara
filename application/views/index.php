@@ -25,7 +25,7 @@
 					
 				<p>Topa fazer uma experiência? Vamos ver como você avalia as proposições legislativas nas quais nossos parlamentares tem trabalhado no congresso nacional?</p>
 
-				<p>comece dando uma olhada nas proposições de leis que nossos parlamentares estão trabalhando no planalto central.</p>
+				<center><p>comece dando uma olhada nas proposições de leis que nossos parlamentares estão trabalhando no planalto central.</p></center>
 				<div class="mockup-content">
 					
 					<p>Nota! Somente será pssível se cadastrar concordando com os termos de uso do site.</p>

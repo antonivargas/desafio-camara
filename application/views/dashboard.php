@@ -2,6 +2,17 @@
 
 <?php $this->load->view("include/menu_admin.php"); ?>     
 
+<?php 
+//var_dump($total_proposicoes);exit();
+
+// foreach ($total_proposicoes as $totalProp){
+// 	$totalProposicoes = $totalProp->total_proposicoes;
+// }
+
+
+
+?>
+
       <div class="panel panel-default">
       <!-- Default panel contents -->
       	<div class="panel-heading"><center><h1><small>Dashboard</small></h1></center></div>
@@ -15,7 +26,7 @@
 				      	<h3 class="panel-title">Usuários cadastrados</h3>
 				      </div>
 				      <div class="panel-body">
-				      	<center><h1><small>250</small></h1></center> 				      
+				      	<center><h1><small><?php echo $total_usuarios; ?></small></h1></center> 				      
 				      </div>
 				    </div>
 
@@ -39,7 +50,7 @@
 				      	<h3 class="panel-title">Proposições cadastradas</h3>
 				      </div>
 				      <div class="panel-body">
-				      	<center><h1><small>2050</small></h1></center>
+				      	<center><h1><small><?php echo $total_proposicoes; ?></small></h1></center>
 				      </div>
 				    </div>
 
@@ -51,7 +62,7 @@
 				      	<h3 class="panel-title">Parlamentares cadastrados</h3>
 				      </div>
 				      <div class="panel-body">
-				        <center><h1><small>620</small></h1></center>
+				        <center><h1><small><?php echo $total_parlamentares; ?></small></h1></center>
 				      </div>
 				    </div>
 

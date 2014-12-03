@@ -41,9 +41,24 @@ class Proposicoes_model extends CI_Model {
         return $this->db->insert('proposicao', $proposicao);
     }
 
-    function somarTodas()
+    function somarProposicoes()
     {
         return $this->db->count_all('proposicao');    
+    }
+
+    function somarUsuarios(){
+
+        return $this->db->count_all('usuarios');    
+    }
+
+    function somarTodas(){
+
+        return $this->db->count_all('proposicao');    
+    }
+
+    public function somarParlamentares(){        
+        
+        return $this->db->query('SELECT count(distinct nome_autor) FROM proposicao');      
     }
 
 

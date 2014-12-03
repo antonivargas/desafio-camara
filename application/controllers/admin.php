@@ -7,14 +7,17 @@ class Admin extends CI_Controller {
 
         if ($this->session->userdata('logado') != true && $this->session->userdata('tipo') != 'A'|| $this->session->userdata('logado') == true && $this->session->userdata('tipo') != 'A')
             redirect(site_url());
-        $this->load->library('pagination');
-
-        //$this->load->model('proposicoes_model');
+        $this->load->library('pagination');        
         
     }
 
-	public function index(){
-            $this->load->view('dashboard');
+	public function index(){            
+            $this->load->model('proposicoes_model');
+            $infos['total_proposicoes'] = $this->proposicoes_model->somarProposicoes(); 
+            $infos['total_usuarios'] = $this->proposicoes_model->somarUsuarios();
+            $infos['total_parlamentares'] = $this->proposicoes_model->somarParlamentares();             
+            var_dump($infos['total_parlamentares']);exit();
+            $this->load->view('dashboard',$infos);
 	}
 
     public function atualizar_proposicoes(){           
