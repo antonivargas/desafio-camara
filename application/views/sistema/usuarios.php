@@ -13,33 +13,29 @@
                 <thead>
                   <th>Nome</th>
                   <th>Email</th>
-                  <th>Status</th>
+                  <th>Último Login</th>
                   <th>Ação</th>                  
                 </thead>
                 <tbody>
+                <?php foreach ($usuarios as $users) { ;?>
                   <tr>
-                    <td>Dimi</td>
-                    <td>antonivargas@gmail.com</td>
-                    <td>Ativo</td>
-                    <th><button type="radio">Bloquear</button></th>
+                    <td><?php  echo $users->nome; ?></td>
+                    <td><?php  echo $users->email; ?></td>
+                    <td><?php  echo $users->last_login; ?></td>
+                    <th><?php  if($users->bloqueado == 'N'){ ?>
+                      
+                      <button value="<?php  echo $users->id; ?>">Bloquear</button>
+                      <?php  }else{ ?>
+                      <button value="<?php  echo $users->id; ?>">Desbloquear</button>
+                      <?php  } ?>
+                    </th>
                   </tr>
-                  <tr>
-                    <td>Filipe</td>
-                    <td>filipe@gmail.com</td>
-                    <td>Ativo</td>
-                    <th><button type="radio">Bloquear</button></th>
-                  </tr>
-                  <tr>
-                    <td>Philippe</td>
-                    <td>philppe@gmail.com</td>
-                    <td>Bloqueado</td>
-                    <th><button type="radio">Desbloquear</button></th>
-                  </tr>
+                <?php } ?>                 
                 </tbody>
                 <tfoot>
                   <th>Nome</th>
                   <th>Email</th>
-                  <th>Status</th>
+                  <th>Último Login</th>
                   <th>Ação</th>
                 </tfoot>
               </table>

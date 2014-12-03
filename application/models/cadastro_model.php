@@ -6,9 +6,14 @@ class Cadastro_model extends CI_Model {
         
         //var_dump($usuario);exit();
         return $this->db->insert('usuarios', $usuario);
-    }   
+    }  
+
+    public function listUsers(){
+    	$retorno = $this->db->get('usuarios');        
+        return $retorno->result();
+    } 
     
 
 }
 
-?>
+?>																																																																								

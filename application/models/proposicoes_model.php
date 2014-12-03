@@ -51,6 +51,12 @@ class Proposicoes_model extends CI_Model {
         return $this->db->count_all('usuarios');    
     }
 
+    function somarUsuariosBloq(){
+        $retorno = $this->db->query('select count(*) id FROM usuarios where bloqueado="Y"');
+        //var_dump($retorno->result());exit();
+        return $retorno->result();      
+    }
+
     function somarTodas(){
 
         return $this->db->count_all('proposicao');    
@@ -58,7 +64,16 @@ class Proposicoes_model extends CI_Model {
 
     public function somarParlamentares(){        
         
-        return $this->db->query('SELECT count(distinct nome_autor) FROM proposicao');      
+        $retorno = $this->db->query('SELECT COUNT(DISTINCT nome_autor) nome_autor FROM proposicao');
+        //var_dump($retorno->result());exit();
+        return $retorno->result();  
+
+        // $this->db->distinct('nome_autor)');  
+        // $this->db->get('proposicao');  
+        //$this->db->where('record =','123');  
+        // return $this->db->get(); 
+        // $query=$this->db->get();  
+        // return $query->num_rows();    
     }
 
 

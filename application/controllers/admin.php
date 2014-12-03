@@ -15,8 +15,9 @@ class Admin extends CI_Controller {
             $this->load->model('proposicoes_model');
             $infos['total_proposicoes'] = $this->proposicoes_model->somarProposicoes(); 
             $infos['total_usuarios'] = $this->proposicoes_model->somarUsuarios();
-            $infos['total_parlamentares'] = $this->proposicoes_model->somarParlamentares();             
-            var_dump($infos['total_parlamentares']);exit();
+            $infos['usuarios_bloqueados'] = $this->proposicoes_model->somarUsuariosBloq();
+            $infos['total_parlamentares'] = $this->proposicoes_model->somarParlamentares();           
+            //var_dump($infos['usuarios_bloqueados']);exit();
             $this->load->view('dashboard',$infos);
 	}
 
@@ -25,9 +26,12 @@ class Admin extends CI_Controller {
             $this->load->view('sistema/atualizar-proposicoes');
     }
 
-    public function usuarios(){           
+    public function usuarios(){  
 
-            $this->load->view('sistema/usuarios');
+            $this->load->model('cadastro_model');
+            $dados['usuarios'] = $this->cadastro_model->listUsers();
+            //var_dump($usuarios);exit();
+            $this->load->view('sistema/usuarios',$dados);
     }
 
     public function carregar_bases(){           

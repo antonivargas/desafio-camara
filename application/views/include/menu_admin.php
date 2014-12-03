@@ -36,7 +36,7 @@
           <?php if($this->session->userdata('logado') == true){ ?>
 
 					<ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo site_url();?>">Aplicação</a></li>
+                <li><a href="<?php echo site_url();?>">Web Site</a></li>
 			          <li><a href="<?php echo site_url('login/logout'); ?>">Logout</a></li>           
 			        </ul>									
 		  <?php } ?>     

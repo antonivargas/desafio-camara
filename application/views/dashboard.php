@@ -2,16 +2,6 @@
 
 <?php $this->load->view("include/menu_admin.php"); ?>     
 
-<?php 
-//var_dump($total_proposicoes);exit();
-
-// foreach ($total_proposicoes as $totalProp){
-// 	$totalProposicoes = $totalProp->total_proposicoes;
-// }
-
-
-
-?>
 
       <div class="panel panel-default">
       <!-- Default panel contents -->
@@ -38,7 +28,7 @@
 				      	<h3 class="panel-title">Usuários Bloqueados</h3>
 				      </div>
 				      <div class="panel-body">
-				        <center><h1><small>5</small></h1></center>
+				        <center><h1><small><?php foreach ($usuarios_bloqueados as $usuarios_bloq) {	echo $usuarios_bloq->id;} ?></small></h1></center>
 				      </div>
 				    </div>
 
@@ -62,7 +52,7 @@
 				      	<h3 class="panel-title">Parlamentares cadastrados</h3>
 				      </div>
 				      <div class="panel-body">
-				        <center><h1><small><?php echo $total_parlamentares; ?></small></h1></center>
+				        <center><h1><small><?php foreach ($total_parlamentares as $parlamentares) {	echo $parlamentares->nome_autor;} ?></small></h1></center>
 				      </div>
 				    </div>
 
