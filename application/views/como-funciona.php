@@ -19,51 +19,19 @@
 				<h1>Como Vai a Câmara?</h1><br />
 				<p>Você conhece as propostas do deputado ou senador que você votou nas últimas eleições?</p>		
 			</header>
-			<section>				
+			<section>			
 				
 				<p>Topa fazer uma experiência? Vamos ver como você avalia as proposições legislativas nas quais nossos parlamentares tem trabalhado no congresso nacional?</p>
+				<p>Este web site é um projeto acadêmico criado com o objetivo de levar informações públicas das atividades parlamentares no congresso nacional, até pessoas
+				comuns, provendo informação de maneira mais clara e objetiva, você poderá navegar por uma lista de propostas de leis, criadas pelos deputados e senadores federais
+				da república, de maneira bem simples verificando as informações mais básicas e importantes para saber do que se trata cada proposta, de maneira bem simples e interativa
+				você poderá também avaliar sob seu entendimento o quão interessante são as propostas que você vier a conhecer através de nosso web site, desta forma terá acesso também
+				a um ranking com a pontução dos parlamentares obtida pela somatória das avaliações das propostas aqui no site. Para que você consiga avaliar as propostas é necessário
+				que você possua uma conta no site, e esteja logado, lembrando que para se cadastrar somente será possível se o usuário concordar com nossos termos de uso do site.</p>
 
-				<p>Para começar é muito simples, clique em uma das opções abaixo para <strong>logar ou criar uma conta</strong>:</p>
+				
 				<div class="mockup-content">
-					<p>Pea horseradish azuki bean lettuce avocado asparagus okra.</p>
-					<div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
-						<button type="button">Login</button>
-						<div class="morph-content">						
-							<div>
-								<div class="content-style-form content-style-form-1">
-									<span class="icon icon-close">Fechar Janela</span>
-									<h2>Login</h2>
-									<?php echo form_open('login/logar');?>
-										<p><label>Email</label><input name="email" type="text" /></p>
-										<p><label>Senha</label><input name="pass" type="password" /></p>
-										 <?php $botao= array('type'=>'submit', 'class'=>'btn', 'value'=>'Login'); ?>
-										<p><?php echo form_submit($botao);?></p>
-									<?php echo form_close();?>
-									
-								</div>
-							</div>						
-						</div>
-					</div><!-- morph-button -->
-					<strong class="joiner">ou</strong>
-					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
-						<button type="button">Signup</button>
-						<div class="morph-content">
-							<div>
-								<div class="content-style-form content-style-form-2">
-									<span class="icon icon-close">Fechar Janela</span>
-									<h2>Sign Up</h2>
-									<form>
-										<p><label>Email</label><input type="text" /></p>
-										<p><label>Senha</label><input type="password" /></p>
-										<p><label>Repita a Senha</label><input type="password" /></p><br>
-										<p><input id="terms" type="checkbox" /><label for="terms">Eu aceito os termos &amp; condições.</label></p>
-										<p><button>Cadastrar</button></p>										
-									</form>
-								</div>
-							</div>
-						</div>
-					</div><!-- morph-button -->
-					<p>Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong.</p>
+					<p>Todas as informações apresentadas neste site são retiradas da API de dados abertos da camara federal do congresso nacional e podem ser acessadas no site oficial através do seguinte link: <a target="blank" href="http://www2.camara.leg.br/">http://www2.camara.leg.br/</a></p>
 				</div><!-- /form-mockup -->
 			</section>			
 		</div><!-- /container -->

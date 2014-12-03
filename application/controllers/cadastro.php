@@ -32,5 +32,44 @@ class Cadastro extends CI_Controller {
         }            
     }
 
+    public function status(){
+
+        $acao = $this->input->post('acao');
+        $id = $this->input->post('iduser');
+        if($acao == "Y"){
+
+            
+            //var_dump($id,$acao);exit();
+
+            $bloqueado['bloqueado'] ="N";
+
+            $this->load->model('cadastro_model'); 
+            $retorno = $this->cadastro_model->desbloqueio($id,$bloqueado);
+
+                if($retorno==true){
+                    //var_dump('Okay');exit();                    
+                    redirect(site_url('admin/usuarios'));
+                }
+
+        }else{
+
+            $acao = $this->input->post('acao');
+            $id = $this->input->post('iduser');            
+            //var_dump($id,$acao);exit();
+
+            $bloqueado['bloqueado'] ="Y";
+
+            $this->load->model('cadastro_model'); 
+            $retorno = $this->cadastro_model->bloqueio($id,$bloqueado);
+
+                if($retorno==true){
+                    //var_dump('Okay');exit();                    
+                    redirect(site_url('admin/usuarios'));
+                }
+
+        }
+
+    }
+
     
 }

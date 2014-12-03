@@ -7,9 +7,9 @@
           <div class="panel-heading"><center><h1>Gerenciamento de Usuários</h1></center></div>
           <div class="panel-body">
 
-              <div class="table-responsive">
+              
               <!-- <h2><small>Tabela Responsive</small></h2> -->
-              <table class="table table-hover table-striped">
+              <table class="table table-striped">
                 <thead>
                   <th>Nome</th>
                   <th>Email</th>
@@ -22,13 +22,18 @@
                     <td><?php  echo $users->nome; ?></td>
                     <td><?php  echo $users->email; ?></td>
                     <td><?php  echo $users->last_login; ?></td>
-                    <th><?php  if($users->bloqueado == 'N'){ ?>
-                      
-                      <button value="<?php  echo $users->id; ?>">Bloquear</button>
-                      <?php  }else{ ?>
-                      <button value="<?php  echo $users->id; ?>">Desbloquear</button>
-                      <?php  } ?>
+                    <?php echo form_open('cadastro/status'); ?>
+                    <th><?php if($users->bloqueado == 'N'){ ?>
+                                 <input type="hidden" name="acao" value="<?php  echo $users->bloqueado; ?>" /> 
+                                 <input type="hidden" name="iduser" value="<?php  echo $users->id; ?>" />                      
+                                 <button type="submit">Bloquear</button>                      
+                       <?php  }else{ ?>
+                                 <input type="hidden" name="acao" value="<?php  echo $users->bloqueado; ?>" /> 
+                                 <input type="hidden" name="iduser" value="<?php  echo $users->id; ?>" />
+                                 <button type="submit">Desbloquear</button>
+                       <?php  } ?>
                     </th>
+                    <?php echo form_close(); ?>
                   </tr>
                 <?php } ?>                 
                 </tbody>
@@ -39,7 +44,7 @@
                   <th>Ação</th>
                 </tfoot>
               </table>
-            </div>
+            
 
 
           </div>

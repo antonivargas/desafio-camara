@@ -30,12 +30,16 @@
 								<div class="content-style-text">
 									<span class="icon icon-close">Close the dialog</span>
 									<h2>Termos &amp; Condições de uso</h2>
-									<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean 
-									mustard tigernut juccama green bean celtuce collard greens avocado quandong <strong>fennel gumbo</strong> 
-									black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane 
-									coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea <strong>
-									tomato spring onion</strong> azuki bean gourd.</p>
-									<p><input id="terms" type="checkbox" /><label for="terms">Eu aceito os termos &amp; condições.</label></p>
+									<p>Ao criar uma conta nesta aplicação automáticamente o usuário concorda com os termos e condições de uso do 
+									web site, o usuário deverá estar ciente de que as informações divulgadas neste web site, não tem cunho político
+									e não devem ser utilizadas em prol nenhum tipo de trabalho ou movimento de cunho político, os administradores do web 
+									site se reservam o direito de bloquear o acesso de qualquer usuário sem aviso prévio se assim julgar necessário, também
+									os usuários deverão estar cientes que ao se cadastrar declaram estar de acordo come stas condições. As informações
+									aqui publicadas são de origem governametal, e podem ser acessadas através das API de dados do site da cãmara federal
+									<strong>http://www2.camara.leg.br</strong> 
+									para mais informações ou contribuições com o projeto entre em contato através do email <strong>
+									antonivargas@gmail.com</strong> .</p>
+									
 								</div>
 							</div>
 						</div>

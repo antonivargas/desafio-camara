@@ -16,7 +16,11 @@
 				      	<h3 class="panel-title">Usuários cadastrados</h3>
 				      </div>
 				      <div class="panel-body">
-				      	<center><h1><small><?php echo $total_usuarios; ?></small></h1></center> 				      
+				      	<center>
+					      	<h1><small>
+					      		<p><b class="timer" data-to="<?php echo $total_proposicoes; ?>" data-speed="1000"><?php echo $total_proposicoes; ?></b></p>
+					      	</small></h1>
+				      	</center> 				      
 				      </div>
 				    </div>
 
@@ -28,7 +32,12 @@
 				      	<h3 class="panel-title">Usuários Bloqueados</h3>
 				      </div>
 				      <div class="panel-body">
-				        <center><h1><small><?php foreach ($usuarios_bloqueados as $usuarios_bloq) {	echo $usuarios_bloq->id;} ?></small></h1></center>
+				        <center>
+				        	<h1><small>
+				        		<?php foreach ($usuarios_bloqueados as $usuarios_bloq) { $userBloq = $usuarios_bloq->id;} ?>
+				        		<p><b class="timer" data-to="<?php echo $userBloq; ?>" data-speed="1000"><?php echo $userBloq; ?></b></p>
+				        	</small></h1>
+				        </center>
 				      </div>
 				    </div>
 
@@ -40,7 +49,11 @@
 				      	<h3 class="panel-title">Proposições cadastradas</h3>
 				      </div>
 				      <div class="panel-body">
-				      	<center><h1><small><?php echo $total_proposicoes; ?></small></h1></center>
+				      	<center>
+				      	<h1><small>
+				      		<p><b class="timer" data-to="<?php echo $total_proposicoes; ?>" data-speed="1000"><?php echo $total_proposicoes; ?></b></p>
+				      	</small></h1>
+				      	</center>
 				      </div>
 				    </div>
 
@@ -52,7 +65,8 @@
 				      	<h3 class="panel-title">Parlamentares cadastrados</h3>
 				      </div>
 				      <div class="panel-body">
-				        <center><h1><small><?php foreach ($total_parlamentares as $parlamentares) {	echo $parlamentares->nome_autor;} ?></small></h1></center>
+				      	<?php foreach ($total_parlamentares as $parlamentares) {	$total = $parlamentares->nome_autor;} ?>
+				        <center><h1><small><p><b class="timer" data-to="<?php echo $total; ?>" data-speed="1000"><?php echo $total; ?></b></p></small></h1></center>
 				      </div>
 				    </div>
 
@@ -68,7 +82,7 @@
 				      <h3 class="panel-title">Gráfico de participação de usuários</h3>
 				      </div>
 				      <div class="panel-body">
-				        <div id="chartdiv4" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+				        <div id="chartdiv1" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
 				      </div>
 				    </div>
 		      		
@@ -82,7 +96,7 @@
 				      <h3 class="panel-title">Gráfico de proposições avaliadas</h3>
 				      </div>
 				      <div class="panel-body">
-				        <div id="chartdiv5" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+				        <div id="chartdiv2" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
 				      </div>
 				    </div>
 

@@ -41,7 +41,7 @@
 				
 				<p>Topa fazer uma experiência? Vamos ver como você avalia as proposições legislativas nas quais nossos parlamentares tem trabalhado no congresso nacional?</p>
 
-				<p>Para começar é muito simples, clique em uma das opções abaixo para <strong>logar ou criar uma conta</strong>:</p>
+				<p>Para começar é muito simples, escolha uma das opções abaixo para logar ou se cadastrar:</p>
 				<div class="mockup-content">
 					<p>Nota! Somente será pssível se cadastrar concordando com os termos de uso do site.</p>
 					<div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">

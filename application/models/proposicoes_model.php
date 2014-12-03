@@ -76,6 +76,8 @@ class Proposicoes_model extends CI_Model {
         // return $query->num_rows();    
     }
 
+    
+
 
     public function proposicoes(/*$_limit = 1000, $_start = 0*/){
 

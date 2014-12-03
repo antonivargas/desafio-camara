@@ -13,6 +13,7 @@ class Admin extends CI_Controller {
 
 	public function index(){            
             $this->load->model('proposicoes_model');
+            
             $infos['total_proposicoes'] = $this->proposicoes_model->somarProposicoes(); 
             $infos['total_usuarios'] = $this->proposicoes_model->somarUsuarios();
             $infos['usuarios_bloqueados'] = $this->proposicoes_model->somarUsuariosBloq();
@@ -27,7 +28,7 @@ class Admin extends CI_Controller {
     }
 
     public function usuarios(){  
-
+            //var_dump('oi');exit();
             $this->load->model('cadastro_model');
             $dados['usuarios'] = $this->cadastro_model->listUsers();
             //var_dump($usuarios);exit();
