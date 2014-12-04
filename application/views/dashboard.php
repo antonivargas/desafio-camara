@@ -1,7 +1,5 @@
 <?php $this->load->view("include/adm_header.php"); ?>
 
-<?php //foreach ($graficouser as $somauser){ $soma = $somauser->id_user;} echo $soma;?>
-
 <?php $this->load->view("include/menu_admin.php"); ?>     
 
 

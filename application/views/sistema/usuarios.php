@@ -1,4 +1,4 @@
-<?php $this->load->view("include/adm_header.php"); ?>
+<?php $this->load->view("include/users_head.php"); ?>
 
 <?php $this->load->view("include/menu_admin.php"); ?>     
       

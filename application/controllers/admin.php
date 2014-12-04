@@ -44,7 +44,7 @@ class Admin extends CI_Controller {
             //var_dump('oi');exit();
             $this->load->model('cadastro_model');
             $dados['usuarios'] = $this->cadastro_model->listUsers();
-            //var_dump($usuarios);exit();
+            // var_dump($dados);exit();
             $this->load->view('sistema/usuarios',$dados);
     }
 
