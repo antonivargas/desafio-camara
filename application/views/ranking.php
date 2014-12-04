@@ -17,27 +17,49 @@
 					<?php }} ?>
 				</nav><br />
 				<h1>Como Vai a Câmara?</h1><br />
-				<p>Você conhece as propostas do deputado ou senador que você votou nas últimas eleições?</p>
+				<p>Você avaliou alguma proposição de lei do seu interesse por aqui?</p>
 			</header>
 			<section>
-				<p>Confira os termos e condições de uso para esta <strong>aplicação</strong>:</p>
+				<p>Confira quem são os autores das proposições que obtiveram as melhores avaliações:</p>
 				<div class="mockup-content">
-					<span></span><span></span><span></span><span></span>
-					<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">
-						<button type="button">Termos &amp; Condições de Uso</button>
-						<div class="morph-content">
-							<div>
-								<div class="content-style-text">
-									<span class="icon icon-close">Close the dialog</span>
-									<h2>Termos &amp; Condições de uso</h2>
-									<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut juccama green bean celtuce collard greens avocado quandong <strong>fennel gumbo</strong> black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea <strong>tomato spring onion</strong> azuki bean gourd.</p>
-									<p><input id="terms" type="checkbox" /><label for="terms">Eu aceito os termos &amp; condições.</label></p>
-								</div>
-							</div>
-						</div>
-					</div><!-- morph-button -->
-					<span></span>
-					<span></span>
+					
+					<div id="ranking">
+					<center><p><h3>Ranking de Parlamentares</h3></p></center>
+					
+							<table id="example" class="display" cellspacing="0" width="100%">
+									<thead>
+										<tr>
+											<th>Nome</th>
+											<th>Estado</th>
+											<th>Partido</th>
+											<th>Pontos de Avaliações</th>																						
+										</tr>
+									</thead>
+							 
+									<tfoot>
+										<tr>
+											<th>Nome</th>
+											<th>Estado</th>
+											<th>Partido</th>
+											<th>Pontos em Avaliacões</th>											
+										</tr>
+									</tfoot>
+									<tbody>																					
+											<?php
+													foreach($ranking as $rank){
+														echo "<tr>";
+														echo "<td>".$rank->nome_autor."</td>";														
+											     	    echo "<td>".$rank->sigla_uf."</td>";
+											     	    echo "<td>".$rank->sigla_partido."</td>";														
+														echo "<td>".$rank->total_nota."</td>";														 
+														echo "</tr>";														   
+													}
+												?>							
+											
+								    </tbody>
+							</table>
+					
+				</div>	
 					
 				</div><!-- /form-mockup -->
 			</section>			

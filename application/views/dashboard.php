@@ -1,6 +1,9 @@
 <?php $this->load->view("include/adm_header.php"); ?>
 
+<?php //foreach ($graficouser as $somauser){ $soma = $somauser->id_user;} echo $soma;?>
+
 <?php $this->load->view("include/menu_admin.php"); ?>     
+
 
 
       <div class="panel panel-default">
@@ -18,7 +21,7 @@
 				      <div class="panel-body">
 				      	<center>
 					      	<h1><small>
-					      		<p><b class="timer" data-to="<?php echo $total_proposicoes; ?>" data-speed="1000"><?php echo $total_proposicoes; ?></b></p>
+					      		<p><b class="timer" data-to="<?php echo $total_proposicoes; ?>" data-speed="1000"><?php echo $total_usuarios; ?></b></p>
 					      	</small></h1>
 				      	</center> 				      
 				      </div>

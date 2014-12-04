@@ -37,7 +37,6 @@ class Cadastro extends CI_Controller {
         $acao = $this->input->post('acao');
         $id = $this->input->post('iduser');
         if($acao == "Y"){
-
             
             //var_dump($id,$acao);exit();
 
@@ -66,7 +65,6 @@ class Cadastro extends CI_Controller {
                     //var_dump('Okay');exit();                    
                     redirect(site_url('admin/usuarios'));
                 }
-
         }
 
     }

@@ -68,15 +68,22 @@ class Proposicoes_model extends CI_Model {
         //var_dump($retorno->result());exit();
         return $retorno->result();  
 
-        // $this->db->distinct('nome_autor)');  
-        // $this->db->get('proposicao');  
-        //$this->db->where('record =','123');  
-        // return $this->db->get(); 
-        // $query=$this->db->get();  
-        // return $query->num_rows();    
+           
     }
 
-    
+    public function totalUsuarios(){
+        $retorno = $this->db->query('select count(distinct id_user) id_user FROM avaliacao');
+        //var_dump($retorno->result());exit();
+        return $retorno->result();      
+    }
+
+    public function totalAvaliacoes(){        
+        $retorno = $this->db->query('select count(distinct id_proposicao) id_proposicao FROM avaliacao');
+        //var_dump($retorno->result());exit();
+        return $retorno->result();
+    }
+
+
 
 
     public function proposicoes(/*$_limit = 1000, $_start = 0*/){

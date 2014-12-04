@@ -13,14 +13,27 @@ class Admin extends CI_Controller {
 
 	public function index(){            
             $this->load->model('proposicoes_model');
-            
+            $infos['total_usuarios'] = $this->proposicoes_model->somarUsuarios();
             $infos['total_proposicoes'] = $this->proposicoes_model->somarProposicoes(); 
             $infos['total_usuarios'] = $this->proposicoes_model->somarUsuarios();
             $infos['usuarios_bloqueados'] = $this->proposicoes_model->somarUsuariosBloq();
             $infos['total_parlamentares'] = $this->proposicoes_model->somarParlamentares();           
             //var_dump($infos['usuarios_bloqueados']);exit();
+            //$graficouser['contar_usuarios'] = $this->proposicoes_model->totalUsuarios();
+            //var_dump($graficouser['contar_usuarios']);exit();
+            //$this->injetaAdmHeader($graficouser);
+
+            $infos['graficouser'] = $this->proposicoes_model->totalUsuarios();
+            $infos['grafavaliacoes'] = $this->proposicoes_model->totalAvaliacoes();
+
             $this->load->view('dashboard',$infos);
 	}
+
+    // public function injetaAdmHeader($graficouser){
+    //         //var_dump($graficouser);exit();
+    //         $graphic['soma_user'] = $graficouser;
+    //         $this->load->view('include/adm_header',$graphic);
+    // }
 
     public function atualizar_proposicoes(){           
 
